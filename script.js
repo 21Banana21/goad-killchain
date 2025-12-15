@@ -461,3 +461,48 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+
+
+//============ Copy in comand==========================
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Находим все блоки кода
+    const codeBlocks = document.querySelectorAll('pre');
+    
+    codeBlocks.forEach((block, index) => {
+        // Создаём контейнер для кнопки
+        const wrapper = document.createElement('div');
+        wrapper.className = 'code-block-wrapper';
+        block.parentNode.insertBefore(wrapper, block);
+        wrapper.appendChild(block);
+        
+        // Создаём кнопку
+        const button = document.createElement('button');
+        button.className = 'copy-button';
+        button.textContent = '📋 Копировать';
+        button.dataset.codeId = index;
+        
+        // Добавляем кнопку перед блоком кода
+        wrapper.insertBefore(button, block);
+        
+        // Обработчик клика
+        button.addEventListener('click', function() {
+            const code = block.textContent;
+            
+            // Копируем в буфер обмена
+            navigator.clipboard.writeText(code).then(() => {
+                // Меняем текст кнопки
+                const originalText = button.textContent;
+                button.textContent = '✅ Скопировано!';
+                
+                // Возвращаем исходный текст через 2 сек
+                setTimeout(() => {
+                    button.textContent = originalText;
+                }, 2000);
+            }).catch(err => {
+                console.error('Ошибка копирования:', err);
+                alert('Не удалось скопировать');
+            });
+        });
+    });
+});
