@@ -1,0 +1,10 @@
+title: Cyber Kill Chain on GOAD
+description: GOAD Writeups (Private)
+url: "https://21Banana21.github.io"
+baseurl: "/goad-killchain"  # Если назвал репо не username.github.io
+
+markdown: kramdown
+highlighter: rouge
+
+# Сделай сайт невидимым для поисковиков
+google_analytics: false
