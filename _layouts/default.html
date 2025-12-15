@@ -27,9 +27,8 @@
     </header>
 
     <main class="container">
-        <!-- Кнопка "Назад" только НЕ на главной странице -->
         {% if page.url != "/" %}
-        <a href="{{ '/' | relative_url }}" class="back-button" style="display: inline-block; padding: 10px 20px; background: var(--color-primary); color: var(--color-btn-primary-text); text-decoration: none; border-radius: var(--radius-base); margin-bottom: 20px; transition: all var(--duration-normal) var(--ease-standard);">← Назад</a>
+        <a href="{{ '/' | relative_url }}" class="back-button">← Назад</a>
         {% endif %}
         
         <article class="markdown-body">
