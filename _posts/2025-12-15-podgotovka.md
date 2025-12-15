@@ -14,7 +14,7 @@ permalink: /podgotovka/
 https://docs.ludus.cloud/docs/environment-guides/goad/
 ```
 
-![Структура GOAD]({{ '/images/image-4.png' | relative_url }})
+![Структура GOAD](/assets/images/image-4.png)
 
 
 Установка GOAD возможна любым удобным способом, описанным в инструкции
@@ -24,7 +24,7 @@ https://docs.ludus.cloud/docs/environment-guides/goad
 
 В ходе прохождения GOAD мы будем использовать как L2-доступ от Kali Linux к хостам GOAD,  так и альтернативный способ взаимодействия через C2 Adaptix.
 
-![Структура GOAD]({{ '/images/image-3.png' | relative_url }})
+![Структура GOAD](/assets/images/image-3.png)
 
 Для установки C2 Adaptix мы также воспользуемся инструкцией.
 ```
