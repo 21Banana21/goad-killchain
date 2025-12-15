@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title | default: site.title }}</title>
+    <link rel="stylesheet" href="{{ '/styles.css' | relative_url }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+</head>
+<body>
+    <div class="background-animation">
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="gradient-orb orb-3"></div>
+    </div>
+
+    <header class="header">
+        <div class="header-content">
+            <a href="{{ '/' | relative_url }}" class="logo">
+                <div class="logo-icon">⚔️</div>
+                <div class="logo-text">
+                    <h1>Cyber Kill Chain on GOAD</h1>
+                    <p class="tagline">Создано PetOS</p>
+                </div>
+            </a>
+        </div>
+    </header>
+
+    <main class="container">
+        <a href="{{ '/' | relative_url }}" class="back-button" style="display: inline-block; padding: 10px 20px; background: var(--color-primary); color: var(--color-btn-primary-text); text-decoration: none; border-radius: var(--radius-base); margin-bottom: 20px; transition: all var(--duration-normal) var(--ease-standard);">← Назад</a>
+        
+        <article class="markdown-body">
+            {{ content }}
+        </article>
+    </main>
+
+    <footer class="footer">
+        <p>⚔️ Writeups Cyber Kill Chain on GOAD | Для исследовательских и образовательных целей</p>
+        <p>🎮 Взламывайте ответственно</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>
+        document.querySelectorAll('pre code').forEach(block => {
+            hljs.highlightElement(block);
+        });
+    </script>
+    <script src="{{ '/script.js' | relative_url }}"></script>
+</body>
+</html>
