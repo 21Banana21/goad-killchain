@@ -467,7 +467,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 document.addEventListener('DOMContentLoaded', function() {
     // Находим все блоки кода
-    const codeBlocks = document.querySelectorAll('pre');
+    const codeBlocks = document.querySelectorAll('pre:not(.egg-content pre)');
     
     codeBlocks.forEach((block, index) => {
         // Создаём контейнер для кнопки
