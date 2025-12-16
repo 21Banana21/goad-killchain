@@ -1723,3 +1723,9 @@ pre code {
     background: none;
     padding: 0;
 }
+
+.img-center {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+}
